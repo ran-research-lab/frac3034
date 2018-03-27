@@ -1,10 +1,33 @@
 
+## Repaso sobre clases
+
+---
+
+### Clase fraccion
+
 * Supon que estamos creando una aplicacion que va 
 a realizar calculos matematicos sobre enteros y 
 fracciones. 
 
-* Tu estas a cargo de diseNar la parte que trabaja 
-con fracciones.
+* Tu estas a cargo de diseNar la parte del programa que trabaja con fracciones.
+
+* Capaz de realizar operaciones aritmeticas sobre fracciones
+
+* Para simplificar tu vida y la de tus compaNeros decides crear un ADT fraccion.
+
+--- 
+
+## ADT Fraccion
+
+* ?que datos?
+
+* ?que operaciones?
+
+---
+
+### Implementemos la declaracion de la clase fraccion
+
+---
 
 @title[Introduction]
 ## The Kitchen Sink
