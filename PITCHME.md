@@ -1,34 +1,36 @@
 
 ## Repaso sobre clases CCOM3034
 
+#### CCOM 3034 - 2017-2018 - Sem 2
+
 ---
 
 ### Clase fraccion
 
-* Supon que estamos creando una aplicacion que va 
-a realizar calculos matematicos sobre enteros y 
-fracciones. 
+* Supón que estamos creando una aplicación que va a realizar cálculos matemáticos sobre enteros y fracciones. 
 
-* Tu estas a cargo de diseNar la parte del programa que trabaja con fracciones
-(capaz de realizar operaciones aritmeticas sobre fracciones)
+* Tu estas a cargo de diseñar la parte del programa que trabaja con fracciones (capaz de realizar operaciones aritméticas sobre fracciones)
 
-* Para simplificar tu vida y la de tus compaNeros decides crear un ADT fraccion.
+* Para simplificar tu vida y la de tus compañeros decides crear un **ADT fracción**.
 
 --- 
 
 ## ADT Fraccion
 
-* ?que datos?
+* ¿qué datos?
 
-* ?que operaciones?
-
----
-
-## Crearemos la declaracion de la clase fraccion en C++
+* ¿qué operaciones?
 
 ---
 
-## Crearemos la implementacion de algunas funciones de la clase C++
+## Vamos a crear la declaración de la clase fracción en C++
+
+* ¿qué datos hay que guardar en cada objeto que reprente una fracción?
+	* ¿qué privilegios debe tener sobre esos datos alguien que use un objeto *fraccion*?
+
+---
+
+## Vamos a implementar algunos de los member functions
 
 * constructor(es)
 * setters y getters?
@@ -36,7 +38,7 @@ fracciones.
 
 ---
 
-## Crearemos la implementacion de mas funciones de la clase C++
+## ... más member functions ... 
 
 * suma (implementacion charra)
     * `fraccion f3 = f1.suma(f2);`
@@ -83,6 +85,16 @@ Para que funcionen expresiones como
 
 ---
 
+## Sobrecargando a << (cont)
+
+
+[https://repl.it/@rafaelarceupr/EjemploPuntos-OOP](https://repl.it/@rafaelarceupr/EjemploPuntos-OOP)
+
+* Observe la member function `display()` y la función **externa** que sobrecarga el `operator<<`.
+
+---
+
+
 ## La importancia de sobrecargar operator<
 
 
@@ -100,6 +112,9 @@ for (auto a : s) {
 
 ---
 
+## La importancia de sobrecargar operator< (cont)
+
+
 * La operación de sort depende de comparaciones entre elementos del vector.
 
 * Si defines operator<, la función `sort` podrá operar sobre objetos de tu clase.
@@ -109,3 +124,9 @@ for (auto a : s) {
 ## Ejemplo:
 
 [https://repl.it/@rafaelarceupr/Sorting-a-vector-of-frac](https://repl.it/@rafaelarceupr/Sorting-a-vector-of-frac)
+
+
+--- 
+
+
+
