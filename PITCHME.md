@@ -57,6 +57,16 @@ Para que funcionen expresiones como
 
 ---
 
+
+![](https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-9/13312854_912222522223356_4593980285730674675_n.jpg?_nc_cat=0&oh=360329839bcf46f4eabde8afc0334ff4&oe=5B3A9621) 
+
+
+---
+
+## Sobrecargando el operador de output stream
+
+
+
 @title[Introduction]
 ## The Kitchen Sink
 ##### <span style="font-family:Helvetica Neue; font-weight:bold">A <span style="color:#e49436">Git</span>Pitch Feature Tour</span>
