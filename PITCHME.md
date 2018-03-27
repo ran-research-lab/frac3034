@@ -9,9 +9,8 @@
 a realizar calculos matematicos sobre enteros y 
 fracciones. 
 
-* Tu estas a cargo de diseNar la parte del programa que trabaja con fracciones.
-
-* Capaz de realizar operaciones aritmeticas sobre fracciones
+* Tu estas a cargo de diseNar la parte del programa que trabaja con fracciones
+(capaz de realizar operaciones aritmeticas sobre fracciones)
 
 * Para simplificar tu vida y la de tus compaNeros decides crear un ADT fraccion.
 
@@ -25,9 +24,23 @@ fracciones.
 
 ---
 
-### Implementemos la declaracion de la clase fraccion
+### Crearemos la declaracion de la clase fraccion en C++
 
 ---
+
+### Crearemos la implementacion de algunas funciones de la clase C++
+
+* constructor(es)
+* setters y getters?
+* display
+
+---
+
+### Crearemos la implementacion de mas funciones de la clase C++
+
+* suma (implementacion charra)
+    * `fraccion f3 = f1.suma(f2)`
+* reciproco
 
 @title[Introduction]
 ## The Kitchen Sink
