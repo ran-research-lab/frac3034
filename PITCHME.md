@@ -24,11 +24,11 @@ fracciones.
 
 ---
 
-### Crearemos la declaracion de la clase fraccion en C++
+## Crearemos la declaracion de la clase fraccion en C++
 
 ---
 
-### Crearemos la implementacion de algunas funciones de la clase C++
+## Crearemos la implementacion de algunas funciones de la clase C++
 
 * constructor(es)
 * setters y getters?
@@ -36,7 +36,7 @@ fracciones.
 
 ---
 
-### Crearemos la implementacion de mas funciones de la clase C++
+## Crearemos la implementacion de mas funciones de la clase C++
 
 * suma (implementacion charra)
     * `fraccion f3 = f1.suma(f2);`
@@ -47,7 +47,7 @@ fracciones.
 
 ---
 
-### Y ahora implementaremos usando operator overloading
+## Y ahora implementaremos usando operator overloading
 
 Para que funcionen expresiones como
 
@@ -89,7 +89,7 @@ Para que funcionen expresiones como
 * STL incluye una función `sort` que funciona para los vectores y otras estructuras de datos.
 
 ```cpp
-std::array<int, 10> s = {5, 7, 4, 2, 8, 6, 1, 9, 0, 3}; 
+vector<int> s = {5, 7, 4, 2, 8, 6, 1, 9, 0, 3}; 
 
 // sort using the default operator<
 std::sort(s.begin(), s.end());
