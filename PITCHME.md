@@ -39,8 +39,23 @@ fracciones.
 ### Crearemos la implementacion de mas funciones de la clase C++
 
 * suma (implementacion charra)
-    * `fraccion f3 = f1.suma(f2)`
+    * `fraccion f3 = f1.suma(f2);`
 * reciproco
+    * `fraccion f4 = f1.reciproco(f1);` 
+* lessthan
+    * `if ( f1.lessthan(f2) )`  
+
+---
+
+### Y ahora implementaremos usando operator overloading
+
+Para que funcionen expresiones como
+
+* `fraccion f3 = f1 + f2;` 
+* `fraccion f4 = ~f1;` 
+* `if (f1 < f2)` 
+
+---
 
 @title[Introduction]
 ## The Kitchen Sink
