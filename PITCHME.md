@@ -72,3 +72,27 @@ Para que funcionen expresiones como
 * las operaciones como `cout  << "hello"; ` se convierten en:
     * `operator<<(cout,"hello");`
 ---
+
+
+## Sobrecargando a << (cont)
+
+* una operación como `cout << a << "hello`" se convierte en una composición de funciones:
+    * `operator<<(operator<<(cout,a),"hello");`
+
+* por lo tanto, cada invocación de `operator<<(cout,a);` debe devolver un ostream.
+
+---
+
+## La importancia de sobrecargar operator<
+
+* STL incluye una función `sort` que funciona para los vectores y otras estructuras de datos.
+
+* La operación de sort depende de comparaciones entre elementos del vector.
+
+* Si defines operator<, la función `sort` podrá operar sobre objetos de tu clase.
+
+---
+
+## Ejemplo:
+
+[https://repl.it/@rafaelarceupr/Sorting-a-vector-of-frac](https://repl.it/@rafaelarceupr/Sorting-a-vector-of-frac)
