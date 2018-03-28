@@ -110,7 +110,7 @@ Crearemos una clase hija de la clase frac.
 
 ---
 
-# Constructores
+### Constructores
 
 ```cpp
 class A {
@@ -133,7 +133,7 @@ int main() {
 
 ---
 
-# Acceso en member functs de clase hija
+### Acceso en member functs de clase hija
 
 ```
 class A {
