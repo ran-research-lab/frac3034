@@ -43,7 +43,7 @@
 * suma (implementacion charra)
     * `fraccion f3 = f1.suma(f2);`
 * reciproco
-    * `fraccion f4 = f1.reciproco(f1);` 
+    * `fraccion f4 = f1.reciproco();` 
 * lessthan
     * `if ( f1.lessthan(f2) )`  
 
@@ -94,6 +94,32 @@ Para que funcionen expresiones como
 
 ---
 
+## Herencia
+
+Ahora supongamos que te piden crear una clase fracPropia para fracciones propias que luego de
+cada operación valide si su contenido es una fracción propia.
+
+Crearemos una clase hija de la clase frac.
+
+* El primer cambio que debemos hacer es en la clase `frac`: cambiar el acceso de sus data members a 
+**protected** para que las clases hijas de frac puedan tener acceso a esos miembros.
+
+---
+
+## Declaración y constructor
+
+```cpp
+
+class fracPropia : public frac {
+public:
+  fracPropia(int n, int d) : frac(n,d) {
+    if (n >= d) cerr << "No es propia\n";
+  }
+  
+};
+```
+
+---
 
 ## La importancia de sobrecargar operator<
 
