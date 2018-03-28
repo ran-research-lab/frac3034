@@ -110,6 +110,8 @@ Crearemos una clase hija de la clase frac.
 
 ---
 
+# Constructores
+
 ```cpp
 class A {
 public: 
@@ -130,6 +132,30 @@ int main() {
 * El constructor de B automaticamente invoca al de A (antes de ejecutar las instrucciones del constructor de B).
 
 ---
+
+# Acceso en member functs de clase hija
+
+```
+class A {
+protected:
+  int x;
+public: 
+  A() { cout << "I am A's constructor\n"; }
+};
+
+
+class B : public A {
+public: 
+  B() { cout << "I am B's constructor\n"; }
+  void bfunc() { x = 10; }
+};
+```
+
+* No hay problema
+
+
+---
+
 
 You can only access protected members in instances of your type (or derived from your type).
 You cannot access protected members of an instance of a parent or cousin type.
