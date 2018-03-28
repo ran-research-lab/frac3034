@@ -127,6 +127,12 @@ int main() {
   B b01;
 }
 ```
+* El constructor de B automaticamente invoca al de A (antes de ejecutar las instrucciones del constructor de B).
+
+---
+
+You can only access protected members in instances of your type (or derived from your type).
+You cannot access protected members of an instance of a parent or cousin type.
 
 ---
 
