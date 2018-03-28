@@ -133,7 +133,7 @@ int main() {
 
 ---
 
-### Acceso en member functs de clase hija
+#### Acceso en member functs de clase hija
 
 ```
 class A {
