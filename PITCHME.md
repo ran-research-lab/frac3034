@@ -259,6 +259,9 @@ fracPropia(const frac &f) : frac(f.getNum(),f.getDen()) {}
 ```
 
 
+---
+
+![https://docs.google.com/drawings/d/e/2PACX-1vTuEX6Y8_lO-atx_PyOWVXXnW47xbntEb4tnFYT3HgZD-159RBZ7f-5sRt0oS3XDfgf6wOXU0BrZChK/pub?w=480&h=360](https://docs.google.com/drawings/d/e/2PACX-1vTuEX6Y8_lO-atx_PyOWVXXnW47xbntEb4tnFYT3HgZD-159RBZ7f-5sRt0oS3XDfgf6wOXU0BrZChK/pub?w=480&h=360)
 
 ---
 
