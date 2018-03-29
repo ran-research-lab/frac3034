@@ -219,6 +219,51 @@ public:
 
 ---
 
+#### Habiendo declarado el constructor....
+
+```cpp
+  fracPropia fp01(8,9);   // funciona
+
+  cout << fp01 << endl;   // funciona
+  
+  fracPropia fp02 = f1;   // No funciona
+```
+
+```
+main.cpp:23:21: error: conversion from ‘frac’ to 
+          non-scalar type ‘fracPropia’ requested
+          fracPropia fp02 = f1;
+```
+
+* C++ no es capaz de "castear" un objeto padre a un objeto hijo
+
+* Si pretendemos hacer eso, la clase padre debe ofrecer getters y . . . 
+
+---
+
+### ... debemos sobrecargar el copy constructor..
+
+* El *copy constructor* es un constructor que es invocado durante las conversiones entre una clase y otra 
+
+```cpp
+frac f1;
+fracParcial fp01;
+
+fp01 = f1;   // conversion de frac a fracParcial! 
+```
+
+* implementación de un copy constr para fracPropia (de forma que podamos asignar un `frac` a un `fracPropia`)
+
+```cpp
+fracPropia(const frac &f) : frac(f.getNum(),f.getDen()) {}
+```
+
+
+
+---
+
+
+
 ## La importancia de sobrecargar operator<
 
 
