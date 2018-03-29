@@ -110,7 +110,7 @@ Crearemos una clase hija de la clase frac.
 
 ---
 
-### Constructores
+#### Constructores
 
 ```cpp
 class A {
@@ -135,7 +135,7 @@ int main() {
 
 #### Acceso en member functs de clase hija
 
-```
+```cpp
 class A {
 protected:
   int x;
@@ -156,9 +156,50 @@ public:
 
 ---
 
+#### Acceso a paremetro de clase padre
 
-You can only access protected members in instances of your type (or derived from your type).
-You cannot access protected members of an instance of a parent or cousin type.
+```cpp
+class A {
+protected:
+  int x;
+public: 
+  A() { cout << "I am A's constructor\n"; }
+};
+
+
+class B : public A {
+public: 
+  B() { cout << "I am B's constructor\n"; }
+  void bfunc(A z) {z.x;}
+};
+```
+
+* Los member functions de la clase Hijo NO pueden acceder protected data members de objetos de clase Padre.
+
+---
+
+#### Acceso a paremetro de clase padre
+
+```cpp
+class A {
+protected:
+  int x;
+public: 
+  A() { cout << "I am A's constructor\n"; }
+};
+
+
+class B : public A {
+public: 
+  B() { cout << "I am B's constructor\n"; }
+  void bfunc(B z) {z.x;}
+};
+```
+
+* Los member functions de la clase Hijo NO pueden acceder protected data members de objetos de clase Padre.
+
+---
+
 
 ---
 
