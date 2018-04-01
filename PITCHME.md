@@ -251,16 +251,17 @@ fracPropia(const frac &f) : frac(f.getNum(),f.getDen()) {}
 
 --- 
 
-### Polimorfismo
+#### Polimorfismo
 
-Work in the same manner with different objects, which define a specific implementation of some abstract behavior.
+* Work in the same manner with different objects, which define a specific implementation of some abstract behavior.
 
-For example,
+* For example,
 
-* Being able to create an array of different objects and apply an operation over all of them.
+    * Being able to create an array of different objects and apply an operation over all of them.
 
-* A GIS software keeps a collection of shapes and must compute the combined area of the shapes.
-* But wait, C++ arrays are homogenous, right??
+    * A GIS software keeps a collection of shapes and must compute the combined area of the shapes.
+ 
+      * But wait, C++ arrays are homogenous, right??
 
 ---
 
