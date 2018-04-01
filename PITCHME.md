@@ -267,7 +267,7 @@ fracPropia(const frac &f) : frac(f.getNum(),f.getDen()) {}
 
 ### Ejemplo de polimorfismo
 
-Un arreglo objetos de diferentes clases y realice operación sobre todos.
+* Un arreglo objetos de diferentes clases y realice operación sobre todos.
 
 ![](https://i.imgur.com/J0rp761.png)
 
@@ -279,7 +279,7 @@ Un arreglo objetos de diferentes clases y realice operación sobre todos.
 
 ### Virtual function
 
-A **virtual function** is a member function that you expect to be redefined in derived classes. When you refer to a derived class object using a pointer or a reference to the base class, you can call a virtual function for that object and execute the derived class's version of the function.
+* A **virtual function** is a member function that you expect to be redefined in derived classes. When you refer to a derived class object using a pointer or a reference to the base class, you can call a virtual function for that object and execute the derived class's version of the function.
 
 ---
 
@@ -305,7 +305,7 @@ int main() {
 
 ---
 
-Cuando sobrecargamos member functions que **no** son **virtual**, la decisión sobre qué member function llamar se toma at **compile time** ...
+* Cuando sobrecargamos member functions que **no** son **virtual**, la decisión sobre qué member function llamar se toma at **compile time** ...
 
 
 ---
@@ -337,7 +337,7 @@ int main() {
 ---
 
 
-A **pure virtual** function is a virtual function whose declaration ends in =0 : ... Derived classes need to override/implement all inherited pure virtual functions. If they do not, they too will become abstract. An interesting 'feature' of C++ is that a class can define a pure virtual function that has an implementation.
+* A **pure virtual** function is a virtual function whose declaration ends in =0 : ... Derived classes need to override/implement all inherited pure virtual functions. If they do not, they too will become abstract. An interesting 'feature' of C++ is that a class can define a pure virtual function that has an implementation.
 
 ---
 
@@ -387,7 +387,7 @@ int main() {
 ---
 
 
-## La importancia de sobrecargar operator<
+### La importancia de sobrecargar operator<
 
 
 * STL incluye una función `sort` que funciona para los vectores y otras estructuras de datos.
@@ -404,7 +404,7 @@ for (auto a : s) {
 
 ---
 
-## La importancia de sobrecargar operator< (cont)
+### La importancia de sobrecargar operator< (cont)
 
 
 * La operación de sort depende de comparaciones entre elementos del vector.
@@ -413,7 +413,7 @@ for (auto a : s) {
 
 ---
 
-## Ejemplo:
+### Ejemplo:
 
 [https://repl.it/@rafaelarceupr/Sorting-a-vector-of-frac](https://repl.it/@rafaelarceupr/Sorting-a-vector-of-frac)
 
