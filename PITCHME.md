@@ -106,6 +106,15 @@ Crearemos una clase hija de la clase frac.
 
 ---
 
+### Herencia 
+
+* Método de reusar código haciendo que un objeto tome propiedades de otro objeto mientras añade las suyas propias.
+
+* Facilita la creación de clases más elaboradas a partir de clases más sencillas
+
+---
+
+
 ## Repasemos algunos detalles sobre herencia
 
 ![](https://docs.google.com/drawings/d/e/2PACX-1vTuEX6Y8_lO-atx_PyOWVXXnW47xbntEb4tnFYT3HgZD-159RBZ7f-5sRt0oS3XDfgf6wOXU0BrZChK/pub?w=1440&h=1080)
@@ -129,7 +138,8 @@ public:
 
 
 int main() {
-  B b01;
+  B b01; // Prints "I am A's constructor"
+         // Then prints: "I am B's constructor"
 }
 ```
 * El constructor de B automaticamente invoca al de A (antes de ejecutar las instrucciones del constructor de B).
@@ -177,31 +187,7 @@ public:
 };
 ```
 
-* Los member functions de la clase Hijo NO pueden acceder protected data members de objetos de clase Padre.
-
----
-
-#### Acceso a paremetro de clase padre
-
-```cpp
-class A {
-protected:
-  int x;
-public: 
-  A() { cout << "I am A's constructor\n"; }
-};
-
-
-class B : public A {
-public: 
-  B() { cout << "I am B's constructor\n"; }
-  void bfunc(B z) {z.x;}
-};
-```
-
-* Los member functions de la clase Hijo NO pueden acceder protected data members de objetos de clase Padre.
-
----
+* Los member functions de la clase Hijo NO pueden acceder protected data members de **parámetros** de clase Padre.
 
 
 ---
@@ -215,21 +201,23 @@ class fracPropia : public frac {
 public:
   fracPropia(int n, int d) : frac(n,d) {
     if (n >= d) cerr << "No es propia\n";
-  }
-  
+  }  
 };
 ```
+
+* Hasta ahora todo bien....
 
 ---
 
 #### Habiendo declarado el constructor....
 
 ```cpp
+  frac       f1(1,1);     // funciona
   fracPropia fp01(8,9);   // funciona
 
   cout << fp01 << endl;   // funciona
   
-  fracPropia fp02 = f1;   // No funciona
+  fracPropia fp02 = f1;   //No funciona
 ```
 
 ```
@@ -261,14 +249,141 @@ fp01 = f1;   // conversion de frac a fracParcial!
 fracPropia(const frac &f) : frac(f.getNum(),f.getDen()) {}
 ```
 
+--- 
+
+### Polimorfismo
+
+Work in the same manner with different objects, which define a specific implementation of some abstract behavior.
+
+For example,
+
+* Being able to create an array of different objects and apply an operation over all of them.
+
+* A GIS software keeps a collection of shapes and must compute the combined area of the shapes.
+* But wait, C++ arrays are homogenous, right??
+
+---
+
+### Ejemplo de polimorfismo
+
+Un arreglo objetos de diferentes clases y realice operación sobre todos.
+
+![](https://i.imgur.com/J0rp761.png)
+
+
+[https://gist.github.com/ccom3033/6318333](https://gist.github.com/ccom3033/6318333)
 
 ---
 
 
+### Virtual function
+
+A **virtual function** is a member function that you expect to be redefined in derived classes. When you refer to a derived class object using a pointer or a reference to the base class, you can call a virtual function for that object and execute the derived class's version of the function.
+
+---
+
+```cpp
+class Base {
+public:
+  virtual void foo() { cout << "The Base class foo\n"; }
+};
+
+class Derived : public Base {
+public:
+  void foo() { cout << "The Derived class foo\n"; }
+};
+
+int main() {
+  Base *b01, *b02;
+  b01 = new Derived;
+  b02 = new Base;
+  b01->foo(); // prints "The Derived class foo"
+  b02->foo(); // prints "The Base class foo"
+}
+```
+
+---
+
+Cuando sobrecargamos member functions que **no** son **virtual**, la decisión sobre qué member function llamar se toma at **compile time** ...
+
+
+---
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+  // esta función NO ES VIRTUAL
+  void foo() { cout << "The Base class foo\n"; }
+};
+
+class Derived : public Base {
+public:
+  void foo() { cout << "The Derived class foo\n"; }
+};
+
+int main() {
+  Base *b01, *b02;
+  b01 = new Derived;
+  b02 = new Base;
+  b01->foo(); // prints "The Base class foo"
+  b02->foo(); // prints "The Base class foo"
+}
+```
+
+---
+
+
+A **pure virtual** function is a virtual function whose declaration ends in =0 : ... Derived classes need to override/implement all inherited pure virtual functions. If they do not, they too will become abstract. An interesting 'feature' of C++ is that a class can define a pure virtual function that has an implementation.
+
+---
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+  // THIS IS A PURE VIRTUAL FUNCTION, THEREFORE
+  // BASE IS AN **ABSTRACT CLASS**
+  virtual void foo() = 0;
+};
+
+int main() {
+  Base *b01;
+  b01 = Base; //Error, can't instance an abstract class
+}
+```
+---
+
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+  // ESTA FUNCION ES PURE VIRTUAL!!!!
+  virtual void foo() = 0;
+};
+
+class Derived : public Base {
+public:
+};
+
+int main() {
+  Base *b01;
+  b01 = new Derived; // No funciona, pues
+                     // Derived no ha implementado 
+                     // la función foo
+}
+```
 
 
 
-
+---
 
 
 ## La importancia de sobrecargar operator<
