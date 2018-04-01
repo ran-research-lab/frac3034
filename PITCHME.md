@@ -337,7 +337,9 @@ int main() {
 ---
 
 
-* A **pure virtual** function is a virtual function whose declaration ends in =0 : ... Derived classes need to override/implement all inherited pure virtual functions. If they do not, they too will become abstract. An interesting 'feature' of C++ is that a class can define a pure virtual function that has an implementation.
+### Pure virtual function
+
+* A **pure virtual** function is a virtual function whose declaration ends in =0 : ... Derived classes need to override/implement all inherited pure virtual functions. If they do not, they too will become abstract. 
 
 ---
 
